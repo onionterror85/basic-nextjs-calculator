@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-      <h1>Basic calculator</h1>
+      <h1>Basic calculator v2</h1>
       <Link href="/sums/addition" className='Link'>Addition</Link>
       <Link href="/sums/subtraction" className='Link'>Subtraction</Link>
       <Link href="/sums/multiplication" className='Link'>Multiplication</Link>
