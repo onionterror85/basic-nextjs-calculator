@@ -12,11 +12,11 @@ export default function Subtraction() {
   return (
     <div className="CalculationContainer">
       <h1>Subtraction arithmetic</h1>
-      <input onChange={(e) => setInputValueOne(e.target.value)}></input>
-      <div>-</div>
-      <input onChange={(e) => setInputValueTwo(e.target.value)}></input>
-      <button onClick={handleClick}>=</button>
-      <div className="CalculationResult">{calculationResult}</div>
+      <input onChange={(e) => setInputValueOne(e.target.value)} cy-id="inputOne"></input>
+      <div cy-id="subtractionSymbol">-</div>
+      <input onChange={(e) => setInputValueTwo(e.target.value)} cy-id="inputTwo"></input>
+      <button onClick={handleClick} cy-id="equalsButton">=</button>
+      <div className="CalculationResult" cy-id="calculationResult">{calculationResult}</div>
     </div>
   );
 }
