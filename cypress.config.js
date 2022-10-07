@@ -7,15 +7,15 @@ module.exports = defineConfig({
       allureWriter(on, config);
       return config;    
     },
-    baseUrl: 'http://localhost:3000',
-    reporter: "cypress-mochawesome-reporter",
-    reporterOptions: {
-      reportDir: "cypress/reports",
-      charts: true,
-      reportPageTitle: "My Test Suite",
-      embeddedScreenshots: true,
-      inlineAssets: true
-    },
+    // baseUrl: 'http://localhost:3000',
+    // reporter: "cypress-mochawesome-reporter",
+    // reporterOptions: {
+    //   reportDir: "cypress/reports",
+    //   charts: true,
+    //   reportPageTitle: "My Test Suite",
+    //   embeddedScreenshots: true,
+    //   inlineAssets: true
+    // },
     video: false
   },
 });
