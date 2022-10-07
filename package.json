@@ -7,17 +7,25 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cy:open": "yarn cypress open --env allure=true --browser chrome",
+    "cy:run": "yarn cypress run --config video=false --env allure=true --browser chrome",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:clear": "rm -r allure-results/ allure-report/latest cypress/screenshots || true",
+    "allure:history": "mv -f allure-report/latest/history allure-results/history && rm -r allure-report/latest || true"
   },
   "dependencies": {
+    "mocha-allure-reporter": "^1.4.0",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.32.1",
+    "allure-mocha": "^2.0.0-beta.19",
     "cypress": "^10.9.0",
+    "cypress-mochawesome-reporter": "^3.2.2",
     "eslint": "8.24.0",
-    "eslint-config-next": "12.3.1"
+    "eslint-config-next": "12.3.1",
+    "mocha": "^10.0.0"
   }
 }

@@ -1,0 +1,166 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-07T10:15:33.847Z",
+    "end": "2022-10-07T10:15:37.568Z",
+    "duration": 3721,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "54f52705-5a79-456a-a7bd-a84b7c022b0e",
+      "title": "",
+      "fullFile": "cypress/e2e/spec.cy.js",
+      "file": "cypress/e2e/spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "749ab2f2-04c2-4389-a1d9-4b004bc8881b",
+          "title": "empty spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "loads the homepage",
+              "fullTitle": "empty spec loads the homepage",
+              "timedOut": null,
+              "duration": 606,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"h1\").should(\"contain\", \"Basic calculator\");",
+              "err": {},
+              "uuid": "cba391a4-3291-4a41-ad00-0306fb371312",
+              "parentUUID": "749ab2f2-04c2-4389-a1d9-4b004bc8881b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "contains a link to working addition functionality",
+              "fullTitle": "empty spec contains a link to working addition functionality",
+              "timedOut": null,
+              "duration": 1038,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[href=\"/sums/addition\"]').click();\ncy.get('[cy-id=\"inputOne\"]').type(\"5\");\ncy.get('[cy-id=\"inputTwo\"]').type(\"10\");\ncy.get('[cy-id=\"equalsButton\"]').click();\ncy.get('[cy-id=\"calculationResult\"]').should(\"have.text\", 15);",
+              "err": {},
+              "uuid": "a58c6b67-eb70-4b87-9691-86a538deb06a",
+              "parentUUID": "749ab2f2-04c2-4389-a1d9-4b004bc8881b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "contains a link to working multiplication functionality",
+              "fullTitle": "empty spec contains a link to working multiplication functionality",
+              "timedOut": null,
+              "duration": 987,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const randomNum = getRandomIntInclusive(1, 2);\ncy.get('[href=\"/sums/multiplication\"]').click();\ncy.get('[cy-id=\"inputOne\"]').type(randomNum);\ncy.get('[cy-id=\"inputTwo\"]').type(\"10\");\ncy.get('[cy-id=\"equalsButton\"]').click();\ncy.get('[cy-id=\"calculationResult\"]').should(\"have.text\", 20);",
+              "err": {},
+              "uuid": "b5a05854-4a1e-417b-b4e9-7c4bf5deef84",
+              "parentUUID": "749ab2f2-04c2-4389-a1d9-4b004bc8881b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "contains a link to working subtraction functionality",
+              "fullTitle": "empty spec contains a link to working subtraction functionality",
+              "timedOut": null,
+              "duration": 1029,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[href=\"/sums/subtraction\"]').click();\ncy.get('[cy-id=\"inputOne\"]').type(\"5\");\ncy.get('[cy-id=\"inputTwo\"]').type(\"10\");\ncy.get('[cy-id=\"equalsButton\"]').click();\ncy.get('[cy-id=\"calculationResult\"]').should(\"have.text\", -5);",
+              "err": {},
+              "uuid": "df97ce13-ace6-4f7f-8890-2ae9c2635f3d",
+              "parentUUID": "749ab2f2-04c2-4389-a1d9-4b004bc8881b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cba391a4-3291-4a41-ad00-0306fb371312",
+            "a58c6b67-eb70-4b87-9691-86a538deb06a",
+            "b5a05854-4a1e-417b-b4e9-7c4bf5deef84",
+            "df97ce13-ace6-4f7f-8890-2ae9c2635f3d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3660,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/.jsons",
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

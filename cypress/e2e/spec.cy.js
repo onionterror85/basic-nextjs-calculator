@@ -33,12 +33,11 @@ describe("empty spec", () => {
     cy.get('[cy-id="calculationResult"]').should("have.text", 20);
   });
 
-  //should fail 100% of the time
   it("contains a link to working subtraction functionality", () => {
     cy.get('[href="/sums/subtraction"]').click();
     cy.get('[cy-id="inputOne"]').type("5");
     cy.get('[cy-id="inputTwo"]').type("10");
     cy.get('[cy-id="equalsButton"]').click();
-    cy.get('[cy-id="calculationResult"]').should("have.text", 15);
+    cy.get('[cy-id="calculationResult"]').should("have.text", -5);
   });
 });
